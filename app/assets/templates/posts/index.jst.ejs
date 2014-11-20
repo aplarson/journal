@@ -1,0 +1,12 @@
+<h2>All Posts</h2>
+
+<ul class="posts-list">
+  <% collection.each(function(post) { %>
+  <li data-id="<%= post.id %>">
+    <a href="#posts/<%= post.id %>" ><%= post.get('title') %> </a>
+    <button class="delete-post" data-id="<%= post.id %>">Delete</button>
+  </li>
+  <% }); %>
+</ul>
+
+<a href="#posts/new">Add a Post!</a>

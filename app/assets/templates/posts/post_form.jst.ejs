@@ -1,0 +1,21 @@
+<h2><%= text %> Post</h2>
+
+<form class="post-form">
+
+
+  <label for="post_title">Title</label>
+  <input type="text" 
+         name="post[title]" 
+         id="post_title" 
+         class="form-input" 
+         value="<%= post.escape('title') %>">
+  
+
+  <label for="post_body">Body</label>
+  <textarea name="post[body]" 
+            id="post_body" 
+            class="form-input"><%= post.escape('body') %></textarea>
+  
+  <button type="submit"><%= text %> Post</button>
+</form>
+
